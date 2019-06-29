@@ -13,7 +13,7 @@
     @include grid-col;
 
     @media (min-width: $min-768) {
-      @include grid-col(7);
+      @include grid-col(10);
     }
   }
 

@@ -18,42 +18,35 @@ import { Devtools } from 'components/devtools/Devtools';
 import s from './AppLayout.scss';
 
 interface IAppLayoutProps {
-  children: React.ReactNode;
+	children: React.ReactNode;
 }
 
 const isDev = process.env.NODE_ENV === 'development';
 
 export default ({ children }: IAppLayoutProps) => (
-  <div className={s.layout}>
-    <Helmet {...helmet} />
+	<div className={s.layout}>
+		<Helmet {...helmet} />
 
-    <Header>
-      <HeaderLink
-        name="about"
-        to="/about"
-      />
+		<Header>
+			<HeaderLink name="about" to="/about" />
 
-      <HeaderLink
-        name="github"
-        to="https://github.com/ueno-llc"
-        icon={<Github />}
-      />
-    </Header>
+			<HeaderLink name="github" to="https://github.com/ueno-llc" icon={<Github />} />
+		</Header>
 
-    {children}
+		{children}
 
-    <Footer
-      logo={<Logo />}
-      social={[
-        { icon: <Dribbble />, to: 'https://dribbble.com/ueno' },
-        { icon: <Twitter />, to: 'https://twitter.com/uenodotco' },
-        { icon: <Github />, to: 'https://github.com/ueno-llc' },
-        { icon: <Instagram />, to: 'https://www.instagram.com/uenodotco' },
-        { icon: <Facebook />, to: 'https://www.facebook.com/uenodotco' },
-        { icon: <Linkedin />, to: 'https://www.linkedin.com/company/ueno' },
-      ]}
-    />
+		<Footer
+			logo={<Logo />}
+			social={[
+				{ icon: <Dribbble />, to: 'https://dribbble.com/ueno' },
+				{ icon: <Twitter />, to: 'https://twitter.com/uenodotco' },
+				{ icon: <Github />, to: 'https://github.com/ueno-llc' },
+				{ icon: <Instagram />, to: 'https://www.instagram.com/uenodotco' },
+				{ icon: <Facebook />, to: 'https://www.facebook.com/uenodotco' },
+				{ icon: <Linkedin />, to: 'https://www.linkedin.com/company/ueno' }
+			]}
+		/>
 
-    {isDev && <Devtools />}
-  </div>
+		{isDev && <Devtools />}
+	</div>
 );
