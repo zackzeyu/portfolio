@@ -13,7 +13,14 @@
     @include grid-col;
 
     @media (min-width: $min-768) {
-      @include grid-col(10);
+      @include grid-col(7);
+    }
+  }
+  &__col__right {
+    @include grid-col;
+
+    @media (min-width: $min-768) {
+      @include grid-col(5);
     }
   }
 

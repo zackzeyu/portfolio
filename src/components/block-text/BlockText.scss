@@ -29,7 +29,8 @@
     font-weight: 300;
     line-height: (26 / 16);
 
-    a { // stylelint-disable-line
+    a {
+      // stylelint-disable-line
       text-decoration: none;
       font-weight: 400;
 
@@ -37,7 +38,8 @@
 
       transition: 200ms opacity ease-in-out;
 
-      &:hover { // stylelint-disable-line
+      &:hover {
+        // stylelint-disable-line
         opacity: 0.5;
       }
     }
