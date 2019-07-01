@@ -6,6 +6,7 @@ import { Intro } from 'components/intro/Intro';
 import { Highlight } from 'components/intro/Highlight';
 import { Greeting } from 'components/intro/Greeting';
 import { BlockText } from 'components/block-text/BlockText';
+import { ProjectCard } from 'components/project-card/ProjectCard';
 import TextLoop from 'react-text-loop';
 
 const SideColumn = () => {
@@ -14,6 +15,10 @@ const SideColumn = () => {
 
 export default () => {
   const interval = 2000;
+  const dummyPhotos = [
+    'https://picsum.photos/id/237/200/300',
+    'https://picsum.photos/id/255/200/300'
+  ];
 
   return (
     <>
@@ -50,7 +55,7 @@ export default () => {
         </TextLoop>
         <Highlight color={'rgba(163, 155, 168, 0.3)'}>QL</Highlight>
       </Intro>
-
+      <ProjectCard photos={dummyPhotos} />
       <BlockText
         heading="Who we are"
         description={

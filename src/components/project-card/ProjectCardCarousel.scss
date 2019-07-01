@@ -1,0 +1,46 @@
+.carousel {
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  flex: 0 0 auto;
+  height: 50%;
+  overflow: hidden;
+
+  &__item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0.25rem 0.25rem 0 0;
+    opacity: 0;
+
+    transition: 1s;
+  }
+}
+
+.active {
+  width: 100%;
+  opacity: 1;
+}
+
+.toggle {
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 2rem;
+  transition: 0.25s;
+  color: rgba(#ecf0f1, 0.5);
+  background-color: rgba(#2c3e50, 0.5);
+  opacity: 0;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+}

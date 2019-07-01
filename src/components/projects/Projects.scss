@@ -1,0 +1,17 @@
+@import '~styles/config';
+
+.block {
+  padding: 60px 0;
+
+  @media (min-width: $min-768) {
+    padding: 180px 0;
+  }
+
+  &__heading {
+    @include rf(16, 18);
+
+    margin-bottom: 10px;
+
+    font-family: $font-heading;
+  }
+}
