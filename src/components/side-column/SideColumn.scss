@@ -1,0 +1,20 @@
+@import '~styles/config';
+
+.sidecontainer {
+  text-align: center;
+
+  @media (min-width: $min-768) {
+    text-align: left;
+  }
+}
+
+.sidecontainer img {
+  border-radius: 50%;
+  height: 25vw;
+  width: 25vw;
+  min-width: 300px;
+  min-height: 300px;
+  border: 1px solid rgba(#37393a, 0.5);
+  padding: 5px;
+  margin: auto;
+}

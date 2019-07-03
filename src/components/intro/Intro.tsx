@@ -14,7 +14,7 @@ export const Intro = ({ children, sideColumn }: IIntroProps) => {
   return (
     <Container>
       <div className={s.intro}>
-        <Row>
+        <Row style={{ flexWrap: 'wrap-reverse' }}>
           <div className={s.intro__col}>
             <div className={s.intro__text}>{children}</div>
           </div>

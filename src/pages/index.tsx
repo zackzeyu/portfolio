@@ -1,18 +1,15 @@
 import * as React from 'react';
 import Helmet from 'react-helmet';
-import Everest from '../assets/images/everest.jpg';
+import Everest from '../assets/images/everest_cropped.jpg';
 
 import { Intro } from 'components/intro/Intro';
+import { SideColumn } from 'components/side-column/SideColumn';
 import { Highlight } from 'components/intro/Highlight';
 import { Greeting } from 'components/intro/Greeting';
 import { BlockText } from 'components/block-text/BlockText';
 import { ProjectCard } from 'components/project-card/ProjectCard';
 import { FlexBox } from 'components/flexbox/FlexBox';
 import TextLoop from 'react-text-loop';
-
-const SideColumn = () => {
-  return <img src={Everest} />;
-};
 
 export default () => {
   const interval = 2000;
