@@ -7,6 +7,7 @@ import { Highlight } from 'components/intro/Highlight';
 import { Greeting } from 'components/intro/Greeting';
 import { BlockText } from 'components/block-text/BlockText';
 import { ProjectCard } from 'components/project-card/ProjectCard';
+import { FlexBox } from 'components/flexbox/FlexBox';
 import TextLoop from 'react-text-loop';
 
 const SideColumn = () => {
@@ -55,7 +56,12 @@ export default () => {
         </TextLoop>
         <Highlight color={'rgba(163, 155, 168, 0.3)'}>QL</Highlight>
       </Intro>
-      <ProjectCard photos={dummyPhotos} />
+      <FlexBox>
+        <ProjectCard photos={dummyPhotos} />
+        <ProjectCard photos={dummyPhotos} />
+        <ProjectCard photos={dummyPhotos} />
+        <ProjectCard photos={dummyPhotos} />
+      </FlexBox>
       <BlockText
         heading="Who we are"
         description={
