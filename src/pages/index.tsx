@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Helmet from 'react-helmet';
-import Fade from 'react-reveal/Fade';
 
 import { Intro } from 'components/intro/Intro';
 import somewhere01 from '../assets/images/somewhere01.jpg';
@@ -10,15 +9,8 @@ import traversall03 from '../assets/images/traversall03.jpg';
 import { SideColumn } from 'components/side-column/SideColumn';
 import { Highlight } from 'components/intro/Highlight';
 import { Greeting } from 'components/intro/Greeting';
-// import { BlockText } from 'components/block-text/BlockText';
-import { ProjectCard } from 'components/project-card/ProjectCard';
-import { FlexBox } from 'components/flexbox/FlexBox';
 import TextLoop from 'react-text-loop';
-
-const dummyPhotos = [
-  'https://picsum.photos/id/237/200/300',
-  'https://picsum.photos/id/255/200/300'
-];
+import Applications from 'components/applications/Applications';
 
 const projectsList = [
   {
@@ -29,11 +21,10 @@ const projectsList = [
     url: 'https://git.io/fj6Lc'
   },
   {
-    photos: dummyPhotos,
     tags: 'TypeScript, React Native Web, MobX, Firebase',
-    projectName: 'Siam',
+    projectName: 'Siam [In Progress]',
     description: 'Progress web + iOS gift exchange app',
-    url: 'https://tbu'
+    url: 'https://github.com/zackzeyu'
   },
   {
     photos: [somewhere01],
@@ -43,7 +34,6 @@ const projectsList = [
     url: 'https://git.io/fj6LW'
   },
   {
-    photos: dummyPhotos,
     tags: 'JavaScript, React, Fastify, PostgreSQL',
     projectName: 'CommentStarter',
     description: 'User comments for a high volume applications',
@@ -89,13 +79,7 @@ export default () => {
         </TextLoop>
         <Highlight color={'rgba(163, 155, 168, 0.3)'}>QL</Highlight>
       </Intro>
-      <FlexBox>
-        <Fade bottom fraction={0.35}>
-          {projectsList.map(project => (
-            <ProjectCard key={project.projectName} {...project} />
-          ))}
-        </Fade>
-      </FlexBox>
+      <Applications projects={projectsList} />
     </>
   );
 };

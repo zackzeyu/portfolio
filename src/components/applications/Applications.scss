@@ -1,0 +1,19 @@
+@import '~styles/config';
+
+.applications {
+  padding: 10px 0;
+  display: block;
+  text-align: center;
+
+  @media (min-width: $min-768) {
+    padding: 20px 0;
+  }
+
+  &__heading {
+    @include rf(20, 24);
+
+    margin-bottom: 10px;
+
+    font-family: $font-heading;
+  }
+}

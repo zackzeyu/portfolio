@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import s from './ProjectCardCarousel.scss';
 
 interface ICarouselProps {
-  photos: string[];
+  photos?: string[];
 }
 
 export default function ProjectCardCarousel({ photos }: ICarouselProps) {
@@ -20,21 +20,22 @@ export default function ProjectCardCarousel({ photos }: ICarouselProps) {
 
   return (
     <div className={s.carousel}>
-      {photos.map((photo, i) => {
-        return (
-          <div
-            key={i}
-            className={
-              s.carousel__item + (currentPhoto === i ? ` ${s.active}` : '')
-            }
-            style={{
-              backgroundImage: `url(${photo})`
-            }}
-          />
-        );
-      })}
+      {photos &&
+        photos.map((photo, i) => {
+          return (
+            <div
+              key={i}
+              className={
+                s.carousel__item + (currentPhoto === i ? ` ${s.active}` : '')
+              }
+              style={{
+                backgroundImage: `url(${photo})`
+              }}
+            />
+          );
+        })}
 
-      {photos.length > 1 && (
+      {photos && photos.length > 1 && (
         <div
           className={s.toggle}
           style={{
@@ -46,7 +47,7 @@ export default function ProjectCardCarousel({ photos }: ICarouselProps) {
           {'>'}
         </div>
       )}
-      {photos.length > 1 && (
+      {photos && photos.length > 1 && (
         <div
           className={s.toggle}
           style={{

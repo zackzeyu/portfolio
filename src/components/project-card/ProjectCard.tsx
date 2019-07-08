@@ -3,7 +3,7 @@ import ProjectCardCarousel from './ProjectCardCarousel';
 import s from './ProjectCard.scss';
 
 interface IProjectCardProps {
-  photos: string[];
+  photos?: string[];
   tags?: string;
   projectName?: string;
   description?: string;
@@ -19,7 +19,7 @@ export const ProjectCard = ({
   description = 'Placeholder description Placeholder description Placeholder description Placeholder description Placeholder description Placeholder description Placeholder description Placeholder description Placeholder description Placeholder description oh god how long does this go this is a  long text that never ends please stop it hurts',
   buttonText = 'Github',
   url = 'https://www.github.com',
-  deployedUrl = 'https://google.com'
+  deployedUrl
 }: IProjectCardProps) => {
   return (
     <div className={s.card}>
@@ -29,11 +29,20 @@ export const ProjectCard = ({
         <div className={s.card__name}>{projectName}</div>
         <div className={s.card__description}>{description}</div>
         <div className={s.card__container__row}>
-          <a className={s.card__button} href={url}>
+          <a
+            className={s.card__button}
+            href={url}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             {buttonText}
           </a>
           {deployedUrl && (
-            <a className={s.card__button_live} href={deployedUrl}>
+            <a
+              className={s.card__button_live}
+              href={deployedUrl}
+              rel="noopener noreferrer"
+            >
               Live
             </a>
           )}

@@ -1,12 +1,8 @@
 import * as React from 'react';
 import Helmet from 'react-helmet';
 
-import ZackLogo from 'assets/svg/zack-logo.svg';
-import Dribbble from 'assets/svg/dribbble.svg';
-import Twitter from 'assets/svg/twitter.svg';
 import Github from 'assets/svg/github.svg';
 import Instagram from 'assets/svg/instagram.svg';
-import Facebook from 'assets/svg/facebook.svg';
 import Linkedin from 'assets/svg/linkedin.svg';
 
 import { helmet } from 'utils/helmet';
@@ -28,26 +24,19 @@ export default ({ children }: IAppLayoutProps) => (
     <Helmet {...helmet} />
 
     <Header>
-      <HeaderLink name="about" to="/about" />
+      <HeaderLink name="apps" to="#applications" />
 
-      <HeaderLink
-        name="github"
-        to="https://github.com/ueno-llc"
-        icon={<Github />}
-      />
+      <HeaderLink name="linkedin" to="http://linkedin.com/in/zackzeyu" />
+      <HeaderLink name="github" to="https://github.com/zackzeyu" />
     </Header>
 
     {children}
 
     <Footer
-      logo={<ZackLogo />}
       social={[
-        { icon: <Dribbble />, to: 'https://dribbble.com/ueno' },
-        { icon: <Twitter />, to: 'https://twitter.com/uenodotco' },
-        { icon: <Github />, to: 'https://github.com/ueno-llc' },
-        { icon: <Instagram />, to: 'https://www.instagram.com/uenodotco' },
-        { icon: <Facebook />, to: 'https://www.facebook.com/uenodotco' },
-        { icon: <Linkedin />, to: 'https://www.linkedin.com/company/ueno' }
+        { icon: <Github />, to: 'https://github.com/zackzeyu' },
+        { icon: <Instagram />, to: 'https://www.instagram.com/zaggedzack' },
+        { icon: <Linkedin />, to: 'https://www.linkedin.com/zackzeyu' }
       ]}
     />
 

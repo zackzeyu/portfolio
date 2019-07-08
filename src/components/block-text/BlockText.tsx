@@ -6,8 +6,8 @@ import { Row } from 'components/row/Row';
 import s from './BlockText.scss';
 
 interface IBlockTextProps {
-  heading: string;
-  description: React.ReactNode;
+  heading?: string;
+  description?: React.ReactNode;
 }
 
 export const BlockText = ({ heading, description }: IBlockTextProps) => (
@@ -15,8 +15,8 @@ export const BlockText = ({ heading, description }: IBlockTextProps) => (
     <div className={s.block}>
       <Row>
         <div className={s.block__col}>
-          <h3 className={s.block__heading}>{heading}</h3>
-          <p className={s.block__description}>{description}</p>
+          {heading && <h3 className={s.block__heading}>{heading}</h3>}
+          {description && <p className={s.block__description}>{description}</p>}
         </div>
       </Row>
     </div>
