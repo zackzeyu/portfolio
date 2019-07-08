@@ -16,7 +16,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ueno-llc/ueno-gatsby-starter"
+    "url": "https://github.com/zackzeyu/portfolio"
   },
   "scripts": {
     "dev": "gatsby develop",

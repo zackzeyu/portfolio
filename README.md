@@ -1,3 +1,9 @@
-# portfolio
+# Zack's Portfolio
 
-This project was bootstrapped with [`create-ueno-app`](https://github.com/ueno-llc/create-ueno-app)
+This project was created to showcase Zack's personal portfolio.
+
+#### Built with:
+* Gatsby
+* React
+* TypeScript
+* Sass
