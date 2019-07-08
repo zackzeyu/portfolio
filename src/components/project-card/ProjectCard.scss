@@ -7,7 +7,6 @@
   height: 450px;
   display: flex;
   flex-flow: column;
-  background-color: #ecf0f1;
   box-shadow: 0 5px 5px rgba(#2c3e50, 0.2);
   user-select: none;
   transition: 0.25s;
@@ -24,12 +23,11 @@
 
   &__tags {
     position: absolute;
-    background-color: rgba(#2c3e50, 0.95);
+    background-color: rgba(#37393a, 0.8);
     color: #ecf0f1;
     border-radius: 0.25rem;
     padding: 0.125rem 0.5rem;
-    top: 1rem;
-    left: 1rem;
+    margin: 1rem;
   }
 
   &__container {
@@ -44,7 +42,7 @@
     height: 50%;
     padding: 1rem 1.3rem;
     box-sizing: border-box;
-    background-color: #ecf0f1;
+    // background-color: #ecf0f1;
 
     &__row {
       display: flex;
@@ -81,9 +79,10 @@
     text-transform: uppercase;
     letter-spacing: 3px;
     color: #ecf0f1;
-    background-color: #1abc9c;
+    background-color: rgba(#37393a, 0.5);
     border-radius: 0.25rem;
-    transition: 0.25s;
+    transition: 0.4s;
+    margin-right: 1rem;
 
     @media (min-width: $min-768) {
       padding: 0.75rem 1.5rem;
@@ -92,7 +91,29 @@
     &:hover,
     &:focus,
     &:active {
-      background-color: #16a085;
+      background-color: rgba(#37393a, 0.7);
+    }
+  }
+
+  &__button_live {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.75rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #ecf0f1;
+    background-color: rgba(#ff6b6b, 0.7);
+    border-radius: 0.25rem;
+    transition: 0.4s;
+
+    @media (min-width: $min-768) {
+      padding: 0.75rem 1.5rem;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: rgba(#ff6b6b, 0.9);
     }
   }
 }

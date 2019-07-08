@@ -23,6 +23,7 @@ export default function ProjectCardCarousel({ photos }: ICarouselProps) {
       {photos.map((photo, i) => {
         return (
           <div
+            key={i}
             className={
               s.carousel__item + (currentPhoto === i ? ` ${s.active}` : '')
             }
@@ -33,26 +34,30 @@ export default function ProjectCardCarousel({ photos }: ICarouselProps) {
         );
       })}
 
-      <div
-        className={s.toggle}
-        style={{
-          right: 0,
-          borderRadius: '0 0.25rem 0 0'
-        }}
-        onClick={rotateLeft}
-      >
-        {'>'}
-      </div>
-      <div
-        className={s.toggle}
-        style={{
-          left: 0,
-          borderRadius: '0.25rem 0 0 0'
-        }}
-        onClick={rotateRight}
-      >
-        {'<'}
-      </div>
+      {photos.length > 1 && (
+        <div
+          className={s.toggle}
+          style={{
+            right: 0,
+            borderRadius: '0 0.25rem 0 0'
+          }}
+          onClick={rotateLeft}
+        >
+          {'>'}
+        </div>
+      )}
+      {photos.length > 1 && (
+        <div
+          className={s.toggle}
+          style={{
+            left: 0,
+            borderRadius: '0.25rem 0 0 0'
+          }}
+          onClick={rotateRight}
+        >
+          {'<'}
+        </div>
+      )}
     </div>
   );
 }
