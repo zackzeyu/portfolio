@@ -36,7 +36,7 @@ export default ({ children }: IAppLayoutProps) => (
       social={[
         { icon: <Github />, to: 'https://github.com/zackzeyu' },
         { icon: <Instagram />, to: 'https://www.instagram.com/zaggedzack' },
-        { icon: <Linkedin />, to: 'https://www.linkedin.com/zackzeyu' }
+        { icon: <Linkedin />, to: 'https://linkedin.com/in/zackzeyu' }
       ]}
     />
 

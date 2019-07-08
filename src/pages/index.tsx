@@ -51,8 +51,7 @@ export default () => {
       <Intro sideColumn={<SideColumn />}>
         <Greeting>// Hello.</Greeting> <br />
         <span>
-          I'm Zack. Software Engineer. I know a bit of JavaScript
-          <sup style={{ fontSize: 12 }}>&nbsp;and TypeScript</sup>
+          I'm Zack. Software Engineer. I build things with JavaScript.
         </span>
         <br />
         <Highlight>React</Highlight>
